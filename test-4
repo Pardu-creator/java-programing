@@ -1,0 +1,21 @@
+public class ArithmeticExceptionExample {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0; // Division by zero
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero.");
+        }
+    }
+}
+
+example 2:
+public class ArrayExceptionExample {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3};
+        try {
+            System.out.println(numbers[5]); // Accessing index out of bounds
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Index out of bounds.");
+        }
+    }
+}
