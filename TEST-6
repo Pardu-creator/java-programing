@@ -1,0 +1,56 @@
+Program 1:
+
+class MyClass {
+    int a;
+    int b;
+    MyClass() {
+        a = 10;
+        b = 15;
+        System.out.println("Default constructor called");
+    }
+    MyClass(int x, int y) {
+        a = x;
+        b = y;
+        System.out.println("Parameterized constructor called");
+    }
+
+    void disp() {
+        System.out.println("a = " + a + ", b = " + b);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj1 = new MyClass();
+        obj1.disp();
+        MyClass obj2 = new MyClass(20, 25);
+        obj2.disp();
+    }
+}
+
+
+Program 2:
+
+
+class Base {
+    void area(int a, int b) {
+        System.out.println("Base: Area of a square with side " + a + " is " + (a * a));
+    }
+}
+
+class Derived extends Base {
+    @Override
+    void area(int a, int b) {
+        System.out.println("Derived: Area of a rectangle with length " + a + " and breadth " + b + " is " + (a * b));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Base base = new Base();
+        base.area(5, 0); 
+
+        Derived derived = new Derived();
+        derived.area(5, 10); 
+    }
+}
